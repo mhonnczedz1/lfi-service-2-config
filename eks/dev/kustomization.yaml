@@ -13,4 +13,4 @@ components:
 images:
   - name: service-2
     newName: ghcr.io/mhonnczedz1/service-2
-    newTag: 26W43B2
+    newTag: 26W43B3
