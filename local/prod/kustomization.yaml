@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+# Injected into every resource the base produces.
+namespace: platform-prod
+resources:
+  - ../../base
+# Behaviour this environment opts into, from the platform's template repository,
+# pinned to a tag. Changing ?ref= is how this environment takes a new version.
+components:
+  - https://github.com/mhonnczedz1/lfi-service-templates//components/canary-manual-gate?ref=v1.0.0
+# The FULL image reference lives here, newName and newTag together. This newTag
+# field is the only thing this service's CI ever writes.
+images:
+  - name: service-2
+    newName: ghcr.io/mhonnczedz1/service-2
+    newTag: 26W40B3

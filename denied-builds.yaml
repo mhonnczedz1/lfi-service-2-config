@@ -1,0 +1,11 @@
+# Builds of team-2-service-2 that must never be promoted to prod. gmake release reads this
+# file and leaves a listed build out of the release. Adding an entry vetoes a
+# build; removing one unblocks it. Both are commits, so the history here is the
+# permanent record of why something never shipped.
+#
+# Example:
+#   denied:
+#     - build: 26W38B3
+#       reason: OOMs at real queue depth after ~6h
+#       denied_by: mhonnczedz1
+denied: []

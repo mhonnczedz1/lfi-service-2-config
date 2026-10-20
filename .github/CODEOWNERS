@@ -1,0 +1,4 @@
+# This repository belongs to the team that runs it. What it protects is the
+# team's decision; the platform only suggests. Prod and the deny list need a review:
+/*/prod/    @mhonnczedz1
+/denied-builds.yaml    @mhonnczedz1
